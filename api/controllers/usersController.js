@@ -16,6 +16,7 @@ module.exports = () => {
         const getNewId = dayjs().format("DDHHMMmmYYss")
         usersData.users.push({
             id: getNewId,
+            name: req.body.name,
             email: req.body.email,
             password: req.body.password,
         })
@@ -29,6 +30,7 @@ module.exports = () => {
 
         const updatedUser = {
             id: userID,
+            name: req.body.name,
             email: req.body.email,
             password: req.body.password,
         }
